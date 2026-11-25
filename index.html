@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Gestión Deportiva A.D.A.</title>
+﻿<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Gestión Deportiva A.D.A.</title>
 <style>
 :root{--ac:#0ea5e9;--bg:#f4f6f9;--cd:#fff;--tx:#1b1f24;--mu:#6b7280;--bd:#d9dde3;--pr:#1d6fe0;--pt:#fff;--ok:#16a34a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171b;--cd:#1e2329;--tx:#e8eaed;--mu:#9aa3ad;--bd:#343b44;--pr:#4b9bff;--pt:#0b1220;--ok:#4ade80;color-scheme:dark}}
@@ -29,14 +29,10 @@ button{cursor:pointer}.tab{white-space:nowrap}.on,.pr{background:linear-gradient
 .exs th:first-child,.exs td:first-child{width:46px}.exs th:nth-child(2),.exs td:nth-child(2){width:250px;text-align:left}.exx th:first-child,.exx td:first-child{width:250px;text-align:left}
 .exn{font-size:12px;color:#555;margin-top:6px}.exf2{margin-top:18px;font-size:11px;color:#777;text-align:center}.ex .col{min-width:250px}.bdi{height:24px;width:24px;object-fit:contain;vertical-align:middle;border-radius:4px;background:#fff}.ex .bdi{height:28px;width:28px}
 .sps{display:flex;align-items:center;gap:16px;overflow-x:auto;padding:8px 12px;margin:0 0 8px;background:var(--cd);border:1px solid var(--bd);border-radius:10px}.sps img{height:44px;max-width:140px;object-fit:contain}.sps .mu{font-size:11px;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}.ex .sps{overflow:visible;flex-wrap:wrap;border:1px solid #d1d5db}.ex .sps img{height:50px}
-.sps{background:#1e293b;border-color:#1e293b}.sps .mu{color:#cbd5e1}.sps img{background:#fff;padding:4px 8px;border-radius:8px;box-sizing:content-box}
-.stk{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;margin:-12px -12px 10px;background:var(--cd);box-shadow:0 4px 10px #0003}.stk .hero{margin:0;border-radius:16px 16px 0 0}.stk .sps{margin:0;border-radius:0;border:0}.stk .tabs{margin:0;padding:6px 12px;background:var(--cd);border-bottom:1px solid var(--bd)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--pr)}
-.sc .hero{padding:5px 12px}.sc .hero small{display:none}.sc .hero .em{font-size:22px}.sc .hero h1{font-size:15px}.sc .hero img{height:28px}.sc .sps{padding:3px 12px}.sc .sps img{height:24px;padding:2px 6px}.sc .sps .mu{display:none}
 button:hover{filter:brightness(1.08)}.champ{font-size:17px;text-align:center;background:linear-gradient(135deg,color-mix(in srgb,var(--ac) 22%,var(--cd)),var(--cd))}
 .bk{display:flex;gap:14px;overflow-x:auto;padding:6px 0;align-items:stretch}.col{min-width:240px;flex:1;display:flex;flex-direction:column;justify-content:space-around;gap:10px}.col h4{margin:0;text-align:center;color:#fff;background:linear-gradient(135deg,var(--pr),var(--ac));border-radius:8px;padding:4px}
 .bm{background:var(--cd);border:1px solid var(--bd);border-left:4px solid var(--pr);border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:4px;box-shadow:0 2px 6px #0001}.bt{display:flex;justify-content:space-between;align-items:center;gap:4px;padding:2px 4px;border-radius:6px}.wn{background:color-mix(in srgb,var(--ok) 20%,transparent);font-weight:700}.sl{width:100%;font-size:12px;padding:3px 6px}
-@media print{.np,.tabs,.bar,.ov{display:none!important}.pri{display:block}body{background:#fff;color:#000}main{border:0;box-shadow:none;background:none}.stk{position:static;margin:0;box-shadow:none}body::before{display:none}#wm{display:none}.card{break-inside:avoid;border-color:#999}th{color:#333}}
+@media print{.np,.tabs,.bar,.ov{display:none!important}.pri{display:block}body{background:#fff;color:#000}main{border:0;box-shadow:none;background:none}#wm{display:none}.card{break-inside:avoid;border-color:#999}th{color:#333}}
 </style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script><script>window.__fb={};window.__fbP=new Promise(r=>{window.__fb.ready=r});window.claude={use:async n=>{await window.__fbP;return n=='db'?(window.__fb.db||null):n=='user'?(window.__fb.user||null):null}};</script>
 <script src="firebase-config.js"></script>
 </head><body><div id="wm" class="np"></div><main id="app"></main>
@@ -273,7 +269,7 @@ function cf(c){const f=c.cfg,d=D[S.disc],n=(k,l)=>`<label>${l}<input type="numbe
 return orgCard()+spCard()+tarCard()+(S.disc=='vol'?vcard():'')+`<div class="card"><h3>Puntos</h3><div class="g">${n('w','Victoria')}${n('d','Empate')}${n('l','Derrota')}${n('wo','W.O. (gana)')}${n('lwo','W.O. (pierde)')}</div><h3>Criterios de desempate (tras puntos)</h3><div class="g">${o(0)}${o(1)}${o(2)}</div><p class="mu">Terminología de ${d[1]}: ${d[2]} (${d[3]}/${d[4]}). Se aplica al cargar resultados; también puedes editar la tabla manualmente.</p></div>
 <div class="card"><h3>Calendario</h3><div class="g"><label>Franjas horarias (separadas por coma)<input value="${esc(f.slots)}" onchange="cfg('slots',this.value)"></label><label>Fecha de inicio<input type="date" value="${esc(f.start)}" onchange="cfg('start',this.value)"></label><label>Días entre fechas<input type="number" value="${f.days}" onchange="cfg('days',this.value,1)"></label><label>Ida y vuelta<select onchange="cfg('dbl',this.value,1)"><option value="0">No</option><option value="1" ${f.dbl?'selected':''}>Sí</option></select></label></div><p class="mu">Los cambios de calendario se aplican al volver a generar el fixture.</p></div>`}
 function R(){if(SY.on&&!SY.did){document.getElementById('app').innerHTML='<div class="card">Cargando torneo compartido…</div>';return}save();const{ts,t,c}=cur(),th=TH[S.disc],rt=document.documentElement.style;rt.setProperty('--pr',th[0]);rt.setProperty('--ac',th[1]);rt.setProperty('--pt','#fff');document.getElementById('wm').textContent=D[S.disc][0];S.tab=S.tab||'tb';const T=[['eq','Equipos'],['cf','Configuración'],['fx','Fixture'],['rs','Resultados'],['tb','Posiciones'],['mx','Equidad'],['br','Llaves'],['cb','Cobros']];
-let h=`<div class="stk"><div class="hero np">${S.im&&S.im.org?`<img src="${S.im.org}" style="height:54px;background:#fff;border-radius:10px;padding:3px">`:`<span class="em">${D[S.disc][0]}</span>`}<div><h1>${esc(orgName())}</h1><small>${D[S.disc][1]} · ${rolTxt()}</small></div></div>${spStrip()}<div class="tabs np">${Object.entries(D).map(([k,v])=>`<button class="tab ${k==S.disc?'on':''}" onclick="go('${k}')">${v[0]} ${v[1]}</button>`).join('')}</div></div>`;
+let h=`<div class="hero np">${S.im&&S.im.org?`<img src="${S.im.org}" style="height:54px;background:#fff;border-radius:10px;padding:3px">`:`<span class="em">${D[S.disc][0]}</span>`}<div><h1>${esc(orgName())}</h1><small>${D[S.disc][1]} · ${rolTxt()}</small></div></div>${spStrip()}<div class="tabs np">${Object.entries(D).map(([k,v])=>`<button class="tab ${k==S.disc?'on':''}" onclick="go('${k}')">${v[0]} ${v[1]}</button>`).join('')}</div>`;
 if(!t){h+=`<div class="card">No hay torneos en ${D[S.disc][1]}. <button class="pr" onclick="newT()">＋ Crear torneo</button></div>`;app.innerHTML=h;gate();return}
 h+=`<div class="bar np"><b>Torneo</b><select onchange="selT(this.value)">${ts.map(x=>`<option value="${x.id}" ${x==t?'selected':''}>${esc(x.name)}</option>`).join('')}</select><button onclick="newT()">＋</button><button onclick="renT()">✎</button><button onclick="delT()">🗑</button></div>
 <div class="bar np"><b>Categoría</b><select onchange="selC(this.value)">${t.cats.map(x=>`<option value="${x.id}" ${x==c?'selected':''}>${esc(x.name)}</option>`).join('')}</select><button onclick="newCat()">＋</button><button onclick="renCat()">✎</button><button onclick="delCat()">🗑</button><span style="flex:1"></span><button onclick="gnx()" class="pr">🎲 Generar rol aleatorio</button><button onclick="shareDlg()">👥 Compartir</button><button onclick="jsonDlg()">JSON</button><button onclick="exDlg()">⬇ Descargar</button><button onclick="prt()">🖨 Imprimir</button></div>
@@ -286,15 +282,17 @@ else if(S.tab=='all')h+=ttl+'<div class="card">'+st(c,0)+'</div><h3>Fixture y re
 app.innerHTML=h;gate()}
 function prt(){prevTab=S.tab;S.tab='all';R();setTimeout(()=>{try{window.print()}catch(e){}},50)}
 window.addEventListener('afterprint',()=>{if(S.tab=='all'){S.tab=prevTab||'tb';R()}});
-const app=document.getElementById('app');load();R();init();let sk=0;addEventListener('scroll',()=>{const y=scrollY;if(!sk&&y>90){sk=1;document.body.classList.add('sc')}else if(sk&&y<20){sk=0;document.body.classList.remove('sc')}},{passive:true});
+const app=document.getElementById('app');load();R();init();
 </script><script type="module">
 /* La configuracion vive en firebase-config.js (mismo folder). Asi puedes reemplazar index.html en cada actualizacion sin volver a pegar tus datos. */
-const FB_CONFIG=window.FB_CONFIG||{apiKey: "AIzaSyAKJSp8bH9CiLtvHIiOzgUGWUXWSLY3JZ0",
+const FB_CONFIG=window.FB_CONFIG||{
+  apiKey: "AIzaSyAKJSp8bH9CiLtvHIiOzgUGWUXWSLY3JZO",
   authDomain: "gestion-deportiva-ada-b96c4.firebaseapp.com",
   projectId: "gestion-deportiva-ada-b96c4",
   storageBucket: "gestion-deportiva-ada-b96c4.firebasestorage.app",
   messagingSenderId: "966358574737",
-  appId: "1:966358574737:web:f7f691113875680cd08130"};
+  appId: "1:966358574737:web:f7f691113875680cd08130"
+};
 const ADMINS=window.ADMINS||["marcguty013@gmail.com"];
 const F=window.__fb;
 const banner=t=>{const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;bottom:8px;left:8px;right:8px;z-index:30;background:#f59e0b;color:#111;padding:8px 12px;border-radius:8px;font:13px system-ui,sans-serif';document.body.appendChild(d)};
