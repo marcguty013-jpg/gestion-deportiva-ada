@@ -123,7 +123,7 @@ const shareDlg=()=>window.__fb.usersDlg?window.__fb.usersDlg():dlg('Inicia sesi\
 function exHtml(k,sel){const{t,c}=cur(),d=D[S.disc],bg=(x,m)=>badge(x,m),
 H=`<div class="exh">${S.im&&S.im.org?`<img src="${S.im.org}" style="float:right;height:64px;background:#fff;border-radius:8px;padding:4px">`:''}<div class="exh1">${esc(orgName()).toUpperCase()}</div><div class="exh2">${d[0]} ${esc(t.name)}</div><div class="exh3">${d[1]} · Categoría ${esc(c.name)}${S.disc=='vol'?' · a '+(t.bo||3)+' sets':''} · ${new Date().toLocaleDateString('es-BO',{day:'2-digit',month:'long',year:'numeric'})}</div></div>`,
 sec=(n,x)=>`<h3>${n}</h3>${x}`,
-wn=m=>m.wo=='d'?null:m.wo?(m.wo=='h'?m.h:m.a):m.f5?(m.f5=='h'?m.a:m.h):m.hs!=null&&m.as!=null?(m.hs>m.as?m.h:m.as>m.hs?m.a:null):null,
+wn=m=>m.wo=='d'?null:m.wo?(m.wo=='h'?m.h:m.a):m.f5?(m.f5=='h'?m.a:m.h):(m.hs!=null&&m.as!=null?(m.hs>m.as?m.h:m.as>m.hs?m.a:null):null),
 det=m=>{if(m.wo=='d')return'Doble W.O.';if(m.wo)return'W.O. · gana '+esc(tm(c,m.wo=='h'?m.h:m.a).name);const ss=(m.sets||[]).filter(p=>p&&p[0]!=null&&p[1]!=null).map(p=>p[0]+'-'+p[1]).join(' · ');if(m.f5)return'W.O. por 5 jugadores · '+ss;if(S.disc=='vol'&&ss)return ss;return m.hs!=null&&m.as!=null?'Finalizado':'Pendiente'},
 sr=m=>m.wo?'W.O.':m.hs!=null&&m.as!=null?m.hs+' – '+m.as:'—',
 fxt=rs=>rs.length?rs.map(r=>`<div class="exr"><div class="exrh">Fecha ${r.n}${dt(c,r)}${r.bye?` · Descansa: ${esc(tm(c,r.bye).name)}`:''}</div><table class="exm"><colgroup><col style="width:90px"><col><col style="width:110px"><col><col style="width:290px"></colgroup><tr><th>Horario</th><th class="r">Local</th><th>Resultado</th><th class="l">Visitante</th><th class="l">Detalle</th></tr>${r.ms.map(m=>{const h=tm(c,m.h),a=tm(c,m.a),w=wn(m);return`<tr><td>${esc(m.s||'')}</td><td class="r" style="${w&&w==m.h?'font-weight:800':''}">${esc(h.name)}${bg(h,'0 0 0 8px')}</td><td class="sc2">${sr(m)}</td><td class="l" style="${w&&w==m.a?'font-weight:800':''}">${bg(a,'0 8px 0 0')}${esc(a.name)}</td><td class="d">${det(m)}</td></tr>`}).join('')}</table></div>`).join(''):'<p>Aún no hay fixture.</p>',
@@ -285,8 +285,8 @@ window.addEventListener('afterprint',()=>{if(S.tab=='all'){S.tab=prevTab||'tb';R
 const app=document.getElementById('app');load();R();init();
 </script><script type="module">
 /* La configuracion vive en firebase-config.js (mismo folder). Asi puedes reemplazar index.html en cada actualizacion sin volver a pegar tus datos. */
-const FB_CONFIG=window.FB_CONFIG||{apiKey:"PEGAR_AQUI"};
-const ADMINS=window.ADMINS||[];
+const FB_CONFIG=window.FB_CONFIG||{apiKey:"AIzaSyAKJSp8bH9CiLtvHIiOzgUGWUXWSLY3JZO",authDomain:"gestion-deportiva-ada-b96c4.firebaseapp.com",projectId:"gestion-deportiva-ada-b96c4",storageBucket:"gestion-deportiva-ada-b96c4.firebasestorage.app",messagingSenderId:"966358574737",appId:"1:966358574737:web:f7f691113875680cd08130"};
+const ADMINS=window.ADMINS||["marcguty013@gmail.com"];
 const F=window.__fb;
 const banner=t=>{const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;bottom:8px;left:8px;right:8px;z-index:30;background:#f59e0b;color:#111;padding:8px 12px;border-radius:8px;font:13px system-ui,sans-serif';document.body.appendChild(d)};
 (async()=>{
