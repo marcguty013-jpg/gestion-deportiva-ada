@@ -289,8 +289,13 @@ window.addEventListener('afterprint',()=>{if(S.tab=='all'){S.tab=prevTab||'tb';R
 const app=document.getElementById('app');load();R();init();let sk=0;addEventListener('scroll',()=>{const y=scrollY;if(!sk&&y>90){sk=1;document.body.classList.add('sc')}else if(sk&&y<20){sk=0;document.body.classList.remove('sc')}},{passive:true});
 </script><script type="module">
 /* La configuracion vive en firebase-config.js (mismo folder). Asi puedes reemplazar index.html en cada actualizacion sin volver a pegar tus datos. */
-const FB_CONFIG=window.FB_CONFIG||{apiKey:"PEGAR_AQUI"};
-const ADMINS=window.ADMINS||[];
+const FB_CONFIG=window.FB_CONFIG||{apiKey: "AIzaSyAKJSp8bH9CiLtvHIiOzgUGWUXWSLY3JZ0",
+  authDomain: "gestion-deportiva-ada-b96c4.firebaseapp.com",
+  projectId: "gestion-deportiva-ada-b96c4",
+  storageBucket: "gestion-deportiva-ada-b96c4.firebasestorage.app",
+  messagingSenderId: "966358574737",
+  appId: "1:966358574737:web:f7f691113875680cd08130"};
+const ADMINS=window.ADMINS||["marcguty013@gmail.com"];
 const F=window.__fb;
 const banner=t=>{const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;bottom:8px;left:8px;right:8px;z-index:30;background:#f59e0b;color:#111;padding:8px 12px;border-radius:8px;font:13px system-ui,sans-serif';document.body.appendChild(d)};
 (async()=>{
